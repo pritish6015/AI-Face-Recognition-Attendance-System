@@ -1,30 +1,44 @@
 # 🎯 Enterprise AI Face Recognition Attendance System
 
-## 📌 Project Overview
+![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)
+![OpenCV](https://img.shields.io/badge/OpenCV-Face%20Recognition-green.svg)
+![Streamlit](https://img.shields.io/badge/Streamlit-Dashboard-red.svg)
+![SQLite](https://img.shields.io/badge/SQLite-Database-blue.svg)
+![License](https://img.shields.io/badge/License-Educational-orange.svg)
+
+---
+
+# 📌 Project Overview
 
 The **Enterprise AI Face Recognition Attendance System** is a modern AI-powered attendance management platform built using Python, OpenCV, Streamlit, SQLite, and Machine Learning.
 
-The system automatically detects and recognizes faces through a webcam and marks attendance in real time. It includes:
+The system automatically detects and recognizes faces through a webcam and marks attendance in real time.
 
-* 🔐 Role-Based Authentication
-* 👨‍💼 Admin Dashboard
-* 👨‍🎓 User Dashboard
-* 📊 Attendance Analytics
-* 📈 Interactive Charts & Reports
-* 🤖 AI Face Recognition
-* 🗂 Attendance Monitoring
-* 🧾 CSV Export Reports
-* 🔑 Secure Login System
+### Key Modules
 
-This project is designed for:
+✅ AI Face Recognition
 
-* Schools
-* Colleges
-* Offices
-* Organizations
-* AI/ML Portfolio Projects
-* Final Year Projects
-* Enterprise Attendance Monitoring
+✅ Attendance Automation
+
+✅ Role-Based Authentication
+
+✅ Admin Dashboard
+
+✅ User Dashboard
+
+✅ Analytics & Reporting
+
+✅ CSV Export
+
+✅ Secure Login System
+
+---
+
+# 📸 Attendance Marking Workflow
+
+The attendance process follows a complete AI-powered workflow from face detection to database storage.
+
+![Attendance Process](Submission%20Document/ATTENDANCE%20MARKING%20PROCESS.png)
 
 ---
 
@@ -38,136 +52,101 @@ Admin has complete system access.
 
 ### User Login
 
-Users can only view their personal attendance records.
+Users can only access their own attendance records.
 
 ### Password Security
 
 Passwords are securely stored using:
 
-* `bcrypt` hashing
+```python
+bcrypt
+```
 
 ---
 
-# 👨‍💼 Admin Dashboard Features
+# 👨‍💼 Admin Dashboard
 
-The admin dashboard provides complete monitoring and management capabilities.
+Admin Dashboard provides complete monitoring and management.
 
-## ✅ User Management
+### User Management
 
-Admin can:
+- Create Users
+- Delete Users
+- Register Faces
+- Generate Credentials
+- Retrain Recognition Model
 
-* Create users
-* Delete users
-* Generate credentials
-* Register faces
-* Retrain AI model automatically
+### Attendance Analytics
 
----
+- Daily Attendance
+- Monthly Trends
+- Yearly Trends
+- Present Today
+- Total Attendance
+- Attendance Statistics
 
-## 📊 Attendance Analytics
+### Interactive Charts
 
-Admin can view:
+Built using Plotly:
 
-* Total users
-* Total attendance
-* Present today
-* Daily trends
-* Monthly trends
-* Yearly trends
-* Attendance statistics
-* Attendance distribution charts
+- Line Charts
+- Pie Charts
+- Trend Analysis
+- Distribution Reports
 
----
+### Reports & Export
 
-## 📈 Interactive Charts
+- CSV Export
+- Filter by Date
+- Monthly Reports
+- Yearly Reports
+- Full Attendance Reports
 
-The system includes:
+### Live Monitoring
 
-* Line charts
-* Pie charts
-* Attendance trend graphs
-* Attendance distribution analysis
-
-Built using:
-
-* Plotly
-
----
-
-## 🧾 Reports & Export
-
-Admin can:
-
-* Filter attendance
-* Export attendance reports
-* Download CSV files
-
-Filters available:
-
-* Today
-* Monthly
-* Yearly
-* All Records
+- Real-time Face Detection
+- Attendance Tracking
+- Camera Monitoring
 
 ---
 
-## 🎥 Live Attendance Monitoring
+# 👨‍🎓 User Dashboard
 
-Admin can:
-
-* Start camera
-* Monitor face detection
-* View real-time attendance marking
-
----
-
-# 👨‍🎓 User Dashboard Features
-
-Each user receives:
-
-* Unique ID
-* Username
-* Password
-
-Example IDs:
+Every user receives:
 
 ```text
 EMP-001
 STU-001
 ```
 
----
+### User Features
 
-## User Dashboard Includes
+- Secure Login
+- Attendance History
+- Personal Analytics
+- Profile Information
+- Attendance Charts
 
-Users can:
+### Restrictions
 
-* Login securely
-* View personal profile
-* View attendance history
-* View attendance charts
-* Monitor personal attendance records
+Users cannot:
 
-Users CANNOT:
-
-* Edit data
-* Delete records
-* Access admin controls
-* View other users' data
+- Access Admin Panel
+- Modify Attendance
+- Delete Records
+- View Other Users
 
 ---
 
 # 🤖 AI Face Recognition System
 
-The project uses:
+### Technologies Used
 
-* OpenCV
-* Haar Cascade
-* LBPH Face Recognizer
+- OpenCV
+- Haar Cascade Classifier
+- LBPH Face Recognizer
 
----
-
-## Face Recognition Workflow
+### Recognition Workflow
 
 ```text
 Face Capture
@@ -181,146 +160,123 @@ Real-Time Recognition
 Attendance Marking
 ```
 
----
-
-## Face Detection
-
-Uses:
+### Face Detection
 
 ```python
 haarcascade_frontalface_default.xml
 ```
 
-for real-time face detection.
-
----
-
-## Face Recognition
-
-Uses:
+### Face Recognition
 
 ```python
 LBPHFaceRecognizer
 ```
 
-Advantages:
+### Advantages
 
-* Fast recognition
-* Lightweight
-* Offline support
-* CPU-friendly
-* Easy deployment
+- Fast Recognition
+- Lightweight
+- Offline Support
+- CPU Friendly
+- Easy Deployment
+
+---
+
+# 🧱 System Architecture
+
+The application follows a layered enterprise architecture.
+
+![Project Architecture](Submission%20Document/project%20arc.png)
+
+### Architecture Layers
+
+### Presentation Layer
+
+- Streamlit UI
+- Login System
+- Dashboard
+- Reports
+
+### Application Layer
+
+- Authentication Module
+- Attendance Processing
+- Analytics Engine
+- Report Generator
+
+### AI Recognition Layer
+
+- OpenCV
+- Haar Cascade
+- Face Recognition Engine
+
+### Database Layer
+
+- SQLite
+- User Records
+- Attendance Logs
+
+---
+
+# 📁 Project File Structure
+
+The project is organized into modular folders for scalability and maintenance.
+
+![Project File Structure](Submission%20Document/PROJECT%20FILE%20STRUCTURE.png)
 
 ---
 
 # 🗄 Database Structure
 
-The project uses:
+The application uses SQLite for attendance storage and management.
 
-* SQLite Database
+![Database Structure](Submission%20Document/Database%20structuer.png)
 
-Database File:
+### Tables
 
-```text
-attendance.db
-```
-
----
-
-## Database Tables
-
-### users
+#### users
 
 Stores:
 
-* Unique ID
-* Username
-* Password
-* Role
-* Department
-* Full Name
+- User Information
+- Credentials
+- Roles
+- Departments
 
----
-
-### attendance
+#### attendance
 
 Stores:
 
-* Attendance records
-* Check-in time
-* Date
-* Status
+- Attendance Records
+- Date
+- Check-in Time
+- Status
 
----
-
-### login_logs
+#### login_logs
 
 Stores:
 
-* User login history
-* Login timestamps
-
----
-
-# 🧱 Project Architecture
-
-```text
-project/
-│
-├── app.py
-├── requirements.txt
-│
-├── database/
-│     └── database.py
-│
-├── auth/
-│     ├── auth_utils.py
-│     └── login.py
-│
-├── admin/
-│     ├── dashboard.py
-│     ├── analytics.py
-│     ├── users.py
-│     └── reports.py
-│
-├── user/
-│     ├── dashboard.py
-│     └── attendance.py
-│
-├── recognition/
-│     ├── add_face.py
-│     ├── train_model.py
-│     └── recognize.py
-│
-├── models/
-│     ├── trainer.yml
-│     └── labels.pkl
-│
-├── dataset/
-├── attendance.db
-└── assets/
-```
+- Login History
+- Login Timestamps
 
 ---
 
 # 🛠 Technologies Used
 
-| Technology | Purpose                      |
-| ---------- | ---------------------------- |
-| Python     | Main programming language    |
-| OpenCV     | Face detection & recognition |
-| Streamlit  | Web dashboard UI             |
-| SQLite     | Database management          |
-| Plotly     | Interactive charts           |
-| NumPy      | Numerical operations         |
-| Pandas     | Data analysis                |
-| bcrypt     | Password hashing             |
+| Technology | Purpose |
+|------------|---------|
+| Python | Backend Development |
+| OpenCV | Face Detection & Recognition |
+| Streamlit | Dashboard Interface |
+| SQLite | Database |
+| Plotly | Analytics |
+| NumPy | Numerical Operations |
+| Pandas | Data Analysis |
+| bcrypt | Password Security |
 
 ---
 
-# 📚 Python Libraries Used
-
-## Core Libraries
+# 📚 Python Libraries
 
 ```python
 streamlit
@@ -335,25 +291,21 @@ pickle
 
 ---
 
-# ⚙ Installation Guide
+# ⚙ Installation
 
-## Step 1: Clone Project
-
-```bash
-git clone <https://github.com/pritish6015/AI-Face-Recognition-Attendance-System.git>
-```
-
----
-
-## Step 2: Open Project Folder
+## Clone Repository
 
 ```bash
-cd project
+git clone https://github.com/pritish6015/AI-Face-Recognition-Attendance-System.git
 ```
 
----
+## Open Project
 
-## Step 3: Install Dependencies
+```bash
+cd AI-Face-Recognition-Attendance-System
+```
+
+## Install Dependencies
 
 ```bash
 pip install -r requirements.txt
@@ -361,9 +313,7 @@ pip install -r requirements.txt
 
 ---
 
-# ▶ Running the Project
-
-## Start Streamlit Application
+# ▶ Run Application
 
 ```bash
 streamlit run app.py
@@ -374,43 +324,11 @@ streamlit run app.py
 # 🔑 Default Admin Credentials
 
 ```text
-Username: admin
-Password: admin123
+Username : admin
+Password : admin123
 ```
 
 ⚠ Change the password after first login.
-
----
-
-# 📸 How Attendance Works
-
-## Step 1
-
-Admin creates user.
-
----
-
-## Step 2
-
-Face images are captured through webcam.
-
----
-
-## Step 3
-
-AI model is trained automatically.
-
----
-
-## Step 4
-
-Camera detects faces in real time.
-
----
-
-## Step 5
-
-Recognized user attendance is marked.
 
 ---
 
@@ -418,50 +336,66 @@ Recognized user attendance is marked.
 
 The system supports:
 
-* Daily attendance analytics
-* Monthly attendance trends
-* Yearly attendance reports
-* Attendance monitoring
-* Attendance visualization
-* Attendance statistics
+- Daily Analytics
+- Monthly Reports
+- Yearly Reports
+- Attendance Trends
+- Attendance Statistics
+- Attendance Monitoring
+- Attendance Visualization
 
 ---
 
 # 🔒 Security Features
 
-## Included
+The platform includes enterprise-grade security mechanisms.
 
-* Password hashing
-* Role-based authentication
-* Session management
-* User access restriction
+![Security Features](Submission%20Document/SECURITY%20FEATURES.png)
 
----
+### Security Modules
 
-## Future Security Upgrades
-
-Possible improvements:
-
-* JWT Authentication
-* Face Anti-Spoofing
-* Multi-factor Authentication
-* Email OTP Verification
-* Liveness Detection
+- Password Hashing
+- Role-Based Authentication
+- Session Management
+- Duplicate Attendance Prevention
+- Secure Database Storage
+- Input Validation
 
 ---
 
-# 📁 Generated Files
+# 🚀 Future Enhancement Architecture
 
-## AI Model Files
+Future versions are designed for scalability and enterprise deployment.
+
+![Future Enhancement](Submission%20Document/FUTURE%20ENHANCEMENT.png)
+
+### Planned Enhancements
+
+- DeepFace Integration
+- FaceNet Recognition
+- Mobile Application
+- Cloud Database
+- QR Attendance Backup
+- CCTV Integration
+- Email Notifications
+- Department Analytics
+- PDF Reports
+- REST APIs
+- Docker Deployment
+- Cloud Hosting
+
+---
+
+# 📂 Generated Files
+
+### AI Models
 
 ```text
 models/trainer.yml
 models/labels.pkl
 ```
 
----
-
-## Dataset Storage
+### Dataset Storage
 
 ```text
 dataset/EMP-001/
@@ -470,48 +404,62 @@ dataset/STU-001/
 
 ---
 
-# 📌 Future Enhancements
+# 📷 Project Screenshots
 
-Future upgrades possible:
+## Attendance Workflow
 
-* DeepFace / FaceNet Integration
-* Cloud Database
-* PostgreSQL/MySQL Support
-* Mobile Application
-* Email Notifications
-* Attendance Heatmaps
-* Department Analytics
-* PDF Report Export
-* REST API Backend
-* Docker Deployment
-* Cloud Hosting
+![Attendance Process](Submission%20Document/ATTENDANCE%20MARKING%20PROCESS.png)
+
+## Architecture
+
+![Architecture](Submission%20Document/project%20arc.png)
+
+## Database Structure
+
+![Database](Submission%20Document/Database%20structuer.png)
+
+## Security Features
+
+![Security](Submission%20Document/SECURITY%20FEATURES.png)
+
+## Future Enhancements
+
+![Future](Submission%20Document/FUTURE%20ENHANCEMENT.png)
+
+## Project Structure
+
+![Structure](Submission%20Document/PROJECT%20FILE%20STRUCTURE.png)
 
 ---
 
-# 🎯 Project Advantages
+# 🎯 Advantages
 
-## Advantages
+✅ Real-Time Attendance
 
-* Real-time attendance system
-* AI-powered recognition
-* Secure login system
-* Enterprise dashboard
-* Interactive analytics
-* Automated attendance marking
-* Easy deployment
-* Offline support
-* Lightweight architecture
+✅ AI-Based Recognition
+
+✅ Automated Attendance Marking
+
+✅ Interactive Dashboard
+
+✅ Analytics & Reports
+
+✅ Secure Authentication
+
+✅ Lightweight Architecture
+
+✅ Offline Support
+
+✅ Easy Deployment
 
 ---
 
 # ⚠ Current Limitations
 
-## Current Version Limitations
-
-* Basic LBPH recognition
-* No anti-spoofing
-* SQLite for local deployment only
-* Webcam dependency
+- Basic LBPH Recognition
+- No Face Anti-Spoofing
+- SQLite Local Deployment
+- Webcam Dependency
 
 ---
 
@@ -519,29 +467,14 @@ Future upgrades possible:
 
 This project demonstrates:
 
-* Computer Vision
-* Machine Learning
-* Face Recognition
-* Database Management
-* Authentication Systems
-* Dashboard Development
-* Data Analytics
-* Streamlit Development
-* Python Backend Development
-
----
-
-# 📷 Screens Included (Optional)
-
-You can add screenshots here:
-
-```text
-Login Page Screenshot
-Admin Dashboard Screenshot
-User Dashboard Screenshot
-Analytics Screenshot
-Attendance Recognition Screenshot
-```
+- Computer Vision
+- Machine Learning
+- Face Recognition
+- Authentication Systems
+- Database Design
+- Dashboard Development
+- Analytics & Reporting
+- Streamlit Development
 
 ---
 
@@ -549,13 +482,13 @@ Attendance Recognition Screenshot
 
 Contributions are welcome.
 
-You can improve:
+Areas for improvement:
 
-* UI/UX
-* AI Accuracy
-* Security
-* Performance
-* Deployment
+- UI/UX Enhancements
+- Security Improvements
+- AI Accuracy
+- Cloud Deployment
+- API Development
 
 ---
 
@@ -567,27 +500,29 @@ This project is developed for educational and professional learning purposes.
 
 # 👨‍💻 Developer
 
+**Pritish Ghosh**
+
 Developed using:
 
-* Python
-* OpenCV
-* Streamlit
-* SQLite
-* Plotly
+- Python
+- OpenCV
+- Streamlit
+- SQLite
+- Plotly
 
 ---
 
 # ⭐ Final Summary
 
-The Enterprise AI Face Recognition Attendance System is a modern AI-powered attendance platform designed for organizations, institutions, and enterprises.
+The Enterprise AI Face Recognition Attendance System is a complete AI-powered attendance management solution that combines:
 
-It combines:
+- Artificial Intelligence
+- Face Recognition
+- Attendance Automation
+- Secure Authentication
+- Analytics
+- Dashboard Monitoring
 
-* Artificial Intelligence
-* Face Recognition
-* Authentication
-* Analytics
-* Dashboard Monitoring
-* Attendance Automation
+into a real-world enterprise-ready attendance platform.
 
-into a complete real-world attendance management solution.
+⭐ If you found this project useful, consider starring the repository.
