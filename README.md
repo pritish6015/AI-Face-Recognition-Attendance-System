@@ -291,19 +291,27 @@ pickle
 
 ---
 
-# ⚙ Installation
+# ⚙ Installation & Setup
 
-## Clone Repository
+## Prerequisites
+
+Before running the project, ensure the following are installed:
+
+* Python 3.10 or above
+* Webcam
+* Git
+* pip package manager
+
+---
+
+## Clone the Repository
 
 ```bash
 git clone https://github.com/pritish6015/AI-Face-Recognition-Attendance-System.git
-```
-
-## Open Project
-
-```bash
 cd AI-Face-Recognition-Attendance-System
 ```
+
+---
 
 ## Install Dependencies
 
@@ -313,10 +321,144 @@ pip install -r requirements.txt
 
 ---
 
-# ▶ Run Application
+# ▶ Running the Application
+
+## Step 1: Initialize the Database (First Time Only)
+
+Run the database setup script to create all required tables:
 
 ```bash
-streamlit run app.py
+python database.py
+```
+
+This automatically creates:
+
+* users
+* attendance
+* login_logs
+* system_state
+
+inside:
+
+```text
+attendance.db
+```
+
+---
+
+## Step 2: Launch the Main Attendance Portal
+
+Start the application using:
+
+```bash
+streamlit run quick_attendance.py --server.port 8502
+```
+
+---
+
+## Step 3: Open the Application
+
+Open your browser and visit:
+
+```text
+http://localhost:8502
+```
+
+---
+
+# 🎯 Main Portal Features
+
+The Main Portal serves as the central entry point of the system.
+
+### 📸 Smart Attendance
+
+* Real-time Face Recognition
+* Automatic Attendance Marking
+* Duplicate Attendance Prevention
+* Live Camera Processing
+
+### 📊 Attendance Details
+
+Users can:
+
+* View Attendance History
+* Monitor Attendance Records
+* Access Attendance Analytics
+* View Monthly Attendance Charts
+
+### 🔐 Admin Portal
+
+Administrators can:
+
+* Manage Users
+* Register New Faces
+* Retrain Recognition Models
+* View Analytics Dashboards
+* Generate Attendance Reports
+
+---
+
+# 🔄 Automatic Module Launching
+
+The system automatically launches additional modules when required.
+
+| Module                    | Port |
+| ------------------------- | ---- |
+| Main Attendance Portal    | 8502 |
+| Admin Dashboard           | 8501 |
+| Attendance Details Portal | 8503 |
+
+Users only need to start:
+
+```bash
+streamlit run quick_attendance.py --server.port 8502
+```
+
+The remaining modules are launched automatically from the browser interface when their corresponding buttons are clicked.
+
+No manual startup of:
+
+```text
+app.py
+view_details.py
+```
+
+is required.
+
+---
+
+# 📋 Typical Workflow
+
+## User Attendance Flow
+
+```text
+Launch Main Portal
+        ↓
+Open Camera
+        ↓
+Face Recognition
+        ↓
+Attendance Marked
+        ↓
+View Attendance Details
+```
+
+---
+
+## Admin Workflow
+
+```text
+Launch Main Portal
+        ↓
+Click Admin Login
+        ↓
+Admin Dashboard Opens
+        ↓
+Manage Users
+        ↓
+Train Model
+        ↓
+View Analytics & Reports
 ```
 
 ---
@@ -328,10 +470,7 @@ Username : admin
 Password : admin123
 ```
 
-⚠ Change the password after first login.
-
----
-
+⚠️ Change the password immediately after first login for security purposes.
 # 📊 Analytics Features
 
 The system supports:
