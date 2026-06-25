@@ -340,7 +340,7 @@ pickle
 ## Step 1: Clone Project
 
 ```bash
-git clone <https://github.com/suraj18-das/--Enterprise-AI-Face-Recognition-Attendance-System.git>
+git clone <https://github.com/pritish6015/AI-Face-Recognition-Attendance-System.git>
 ```
 
 ---
